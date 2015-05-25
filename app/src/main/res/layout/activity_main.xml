@@ -16,14 +16,22 @@
         android:textStyle="bold"
         android:textSize="32dp"
         android:paddingTop="5dp" />
-
+    <TextView
+        android:id="@+id/line"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffffff"
+        android:paddingTop="10dp"
+        android:text="Finance"
+        android:textStyle="bold"/>
     <TextView
         android:id="@+id/line1"
         style="@android:style/TextAppearance.Medium"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textColor="#ffffffff"
-        android:paddingTop="32dp" />
+        android:paddingTop="12dp" />
     <TextView
         android:id="@+id/line2"
         style="@android:style/TextAppearance.Medium"
