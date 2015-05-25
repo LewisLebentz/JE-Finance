@@ -192,11 +192,11 @@ public class MainActivity extends Activity {
             TextView line5 = (TextView)findViewById(R.id.line5);
 
             // Change the values for all the TextViews
-            line0.setText("Price: " + stockPrice);
+            line0.setText("Name: " + stockName);
 
-            line1.setText("Name: " + stockName);
+            line1.setText("Symbol: " + stockSymbol);
 
-            line2.setText("Symbol: " + stockSymbol);
+            line2.setText("Price: " + stockPrice);
 
             line3.setText("Change: " + stockChange);
 
