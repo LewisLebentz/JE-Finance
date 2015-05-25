@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
     static String stockDaysHigh = "";
     static String stockChange = "";
     static String stockName = "";
+    static String stockPrice = "";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -140,6 +141,7 @@ public class MainActivity extends Activity {
                 stockDaysHigh = quoteJSONObject.getString("DaysHigh");
                 stockChange = quoteJSONObject.getString("Change");
                 stockName = quoteJSONObject.getString("Name");
+                stockPrice = quoteJSONObject.getString("LastTradePriceOnly");
 
                 // EXTRA STUFF THAT HAS NOTHING TO DO WITH THE PROGRAM
 
@@ -182,6 +184,7 @@ public class MainActivity extends Activity {
         protected void onPostExecute(String result){
 
             // Gain access so I can change the TextViews
+            TextView line0 = (TextView)findViewById(R.id.line0);
             TextView line1 = (TextView)findViewById(R.id.line1);
             TextView line2 = (TextView)findViewById(R.id.line2);
             TextView line3 = (TextView)findViewById(R.id.line3);
@@ -189,6 +192,8 @@ public class MainActivity extends Activity {
             TextView line5 = (TextView)findViewById(R.id.line5);
 
             // Change the values for all the TextViews
+            line0.setText("Price: " + stockPrice);
+
             line1.setText("Name: " + stockName);
 
             line2.setText("Symbol: " + stockSymbol);
